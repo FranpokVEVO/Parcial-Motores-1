@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: f1c84725fa0c3a94ca84cd0b9276d416
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Disparo: {instanceID: 0}
+  - bala: {fileID: 2728049301227113339, guid: 53f148304ced6d343b3f5ffb211ad147, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
