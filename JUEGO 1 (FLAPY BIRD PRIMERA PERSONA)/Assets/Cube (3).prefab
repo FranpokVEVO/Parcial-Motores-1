@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2783700633319461788}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,13 +59,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0851a9730037e3544a49517d0f34d766, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,6 +115,8 @@ GameObject:
   m_Component:
   - component: {fileID: 553445864531976961}
   - component: {fileID: 1598422807734836165}
+  - component: {fileID: 7696823221323085632}
+  - component: {fileID: 5420161417351549340}
   m_Layer: 0
   m_Name: medio
   m_TagString: Untagged
@@ -161,6 +160,47 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.7237077, y: 3.4993606, z: 1}
   m_Center: {x: 0.25548026, y: 0.31620717, z: 0}
+--- !u!114 &7696823221323085632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496204905082305968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0103304056dd3b9418184e9315a85666, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puntos: 1
+  textoPuntaje: {fileID: 5751377194177861473, guid: 151ecbbbc19f4b04e89e5e2c63683543, type: 3}
+--- !u!54 &5420161417351549340
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496204905082305968}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5271848045185287396
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,10 +213,9 @@ GameObject:
   - component: {fileID: 3993705948103385099}
   - component: {fileID: 7059912805238041404}
   - component: {fileID: 4736142738508241406}
-  - component: {fileID: 1155155705774682928}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,7 +229,7 @@ Transform:
   m_GameObject: {fileID: 5271848045185287396}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.001, y: 11.66, z: 0}
+  m_LocalPosition: {x: -0.01, y: 11.66, z: 0}
   m_LocalScale: {x: 0.9953607, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -221,13 +260,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0851a9730037e3544a49517d0f34d766, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -270,20 +306,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1155155705774682928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5271848045185287396}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eca7dd2883523564b8116308f59a05da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  puntos: 1
 --- !u!1 &6959381652369974751
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +320,7 @@ GameObject:
   - component: {fileID: 4396063144769931109}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,13 +365,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0851a9730037e3544a49517d0f34d766, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -405,6 +424,7 @@ GameObject:
   - component: {fileID: 8524950893120787787}
   - component: {fileID: 3054490237861107932}
   - component: {fileID: 8136543191354181064}
+  - component: {fileID: 5674945656847176549}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Obstaculo
@@ -421,13 +441,13 @@ Transform:
   m_GameObject: {fileID: 8408763504131821050}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.98, y: 3.24, z: 12.74714}
+  m_LocalPosition: {x: 10.84, y: 3.29, z: 12.74714}
   m_LocalScale: {x: 5.6435623, y: 0.36553, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7638052239590296219}
   - {fileID: 1987710059409502945}
   - {fileID: 2805587510372220939}
+  - {fileID: 7638052239590296219}
   - {fileID: 553445864531976961}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -456,13 +476,10 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0851a9730037e3544a49517d0f34d766, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -519,3 +536,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   puntos: 1
+--- !u!54 &5674945656847176549
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8408763504131821050}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

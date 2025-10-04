@@ -3,8 +3,7 @@ guid: 7ca87cfe5579e7a469541df92ad0e852
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - timerText: {fileID: 2980888396425957519, guid: f327606ba971f1e41a5a341530798f92, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

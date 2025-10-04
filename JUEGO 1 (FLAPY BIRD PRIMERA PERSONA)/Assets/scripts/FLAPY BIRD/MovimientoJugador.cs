@@ -1,29 +1,31 @@
 using UnityEngine;
-using UnityEngine.Animations;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class MovimientoJugador : MonoBehaviour
 {
-    public float speed = 1.0f;
-    public float salto = 1.0f;
-    public Rigidbody COLISION;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float speed = 5f;
+    public float salto = 5f;
+    public float adelante = 5f;
+
+    private Rigidbody rb;
+
     void Start()
     {
-        COLISION = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
-    public float adelante = 5f;
     void Update()
     {
+        // Movimiento hacia adelante constante
         transform.Translate(Vector3.forward * adelante * Time.deltaTime);
+
+        // Movimiento horizontal (izq-der)
         float horizontal = Input.GetAxis("Horizontal");
-        COLISION.linearVelocity = new Vector3(horizontal * speed, COLISION.linearVelocity.y);
+        rb.velocity = new Vector3(horizontal * speed, rb.velocity.y, rb.velocity.z);
 
-
-        if (Input.GetKey(KeyCode.Space))
+        // Salto
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            COLISION.linearVelocity = new Vector2(COLISION.linearVelocity.x, salto);
-
+            rb.velocity = new Vector3(rb.velocity.x, salto, rb.velocity.z);
         }
     }
 }

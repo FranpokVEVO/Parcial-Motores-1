@@ -1,25 +1,30 @@
-using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
-using UnityEngine.UI;
+using System.Collections.Generic;
+using UnityEngine;
+
 public class puntos : MonoBehaviour
 {
-private int puntaje = 0;
-    public Text t; // Arrastrar el Text en el inspector
+public static int puntajeTotal = 0;   // Puntaje global
+    public TextMesh textoPuntaje;          // Asignar desde inspector
+    public int puntosPorEnemigo = 1;      // Puntos que da cada enemigo
 
-    void OnEnable()
+    private void OnEnable()
     {
-        enemigo.OnEnemigoDestruido += SumarPunto; // Se suscribe al evento
+        enemigo.OnEnemigoDestruido += SumarPuntos;
     }
 
-    void OnDisable()
+    private void OnDisable()
     {
-        enemigo.OnEnemigoDestruido -= SumarPunto; // Se desuscribe al cerrar
+        enemigo.OnEnemigoDestruido -= SumarPuntos;
     }
 
-    void SumarPunto()
+    private void SumarPuntos()
     {
-        puntaje++;
-        t.text = "Puntos: " + puntaje.ToString();
+        puntajeTotal += puntosPorEnemigo;
+
+        if (textoPuntaje != null)
+            textoPuntaje.text = "Puntaje: " + puntajeTotal;
+
+        Debug.Log("Puntaje: " + puntajeTotal);
     }
 }
