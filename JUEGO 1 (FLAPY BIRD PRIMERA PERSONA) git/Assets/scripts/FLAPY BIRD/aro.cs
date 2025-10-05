@@ -12,26 +12,9 @@ public class AroTextMesh : MonoBehaviour
     void Start()
     {
         // Buscar jugador automáticamente
-        GameObject jugadorObj = GameObject.FindGameObjectWithTag("Player");
-        if (jugadorObj != null)
-            player = jugadorObj.transform;
-
         // Buscar texto de puntaje (3D TextMesh con tag "Puntaje")
-        GameObject txtObj = GameObject.FindGameObjectWithTag("Puntaje");
-        if (txtObj != null)
-            scoreText = txtObj.GetComponent<TextMesh>();
-
         // Crear un collider interno invisible para el centro
-        centroTrigger = new GameObject("CentroTrigger");
-        centroTrigger.transform.parent = this.transform;
-        centroTrigger.transform.localPosition = Vector3.zero;
-
-        SphereCollider sc = centroTrigger.AddComponent<SphereCollider>();
-        sc.isTrigger = true;
-        sc.radius = 1f; // ajustar según tamaño del aro
-
-        CentroTrigger ct = centroTrigger.AddComponent<CentroTrigger>();
-        ct.puntos = puntos;
+        
     }
 
     void Update()
@@ -39,10 +22,7 @@ public class AroTextMesh : MonoBehaviour
         // Movimiento del aro
         if (player != null)
             transform.position += player.forward * speed * Time.deltaTime;
-
         // Actualizar puntaje
-        if (scoreText != null)
-            scoreText.text = "Puntaje: " + score;
     }
 
     private void OnTriggerEnter(Collider other)
