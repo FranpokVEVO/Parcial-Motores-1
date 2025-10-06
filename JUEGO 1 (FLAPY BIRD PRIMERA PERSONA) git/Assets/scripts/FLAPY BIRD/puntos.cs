@@ -1,24 +1,24 @@
 using UnityEngine;
+using TMPro; 
 
-public class PuntosTrigger : MonoBehaviour
+public class PuntoTrigger : MonoBehaviour
 {
-    public int puntos = 1;
-    public static int puntajeTotal = 0;
     public TextMesh textoPuntaje; // Arrastrar desde inspector
-
-    private void OnTriggerEnter(Collider other)
+    public TextMeshProUGUI textoPuntaje; 
+    public int puntosPorColision = 1;
+    private static long puntajeTotal = 0;
+    void Start()
     {
+    textoPuntaje = GameObject.FindGameObjectWithTag("Puntaje").GetComponent<TextMeshProUGUI>();
+    }
+    void OnTriggerEnter(Collider other)
+    {
+       
         if (other.CompareTag("Player"))
         {
-            puntajeTotal += puntos;
-
-            if (textoPuntaje != null)
-                textoPuntaje.text = "Puntaje: " + puntajeTotal;
-
-            Debug.Log("Jugador pasó y sumó puntos: " + puntajeTotal);
-
             // Destruir solo el trigger para no sumar dos veces
-            Destroy(gameObject);
+            puntajeTotal += puntosPorColision;
+            textoPuntaje.text = "Puntos: " + puntajeTotal;
         }
     }
 }

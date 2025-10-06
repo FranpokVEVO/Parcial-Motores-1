@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0103304056dd3b9418184e9315a85666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntos: 1
-  textoPuntaje: {fileID: 5751377194177861473, guid: 151ecbbbc19f4b04e89e5e2c63683543, type: 3}
+  textoPuntaje: {fileID: 7559746705337611760, guid: 6e47c0b13b9ff1d4a984aa16216b95c3, type: 3}
+  puntosPorColision: 1
 --- !u!54 &5420161417351549340
 Rigidbody:
   m_ObjectHideFlags: 0
