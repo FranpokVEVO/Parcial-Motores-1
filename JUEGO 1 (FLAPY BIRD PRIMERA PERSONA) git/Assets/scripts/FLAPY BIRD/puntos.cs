@@ -1,9 +1,9 @@
 using UnityEngine;
 using TMPro; 
 
-public class PuntoTrigger : MonoBehaviour
+public class punto: MonoBehaviour
 {
-    public TextMesh textoPuntaje; // Arrastrar desde inspector
+
     public TextMeshProUGUI textoPuntaje; 
     public int puntosPorColision = 1;
     private static long puntajeTotal = 0;
@@ -16,7 +16,7 @@ public class PuntoTrigger : MonoBehaviour
        
         if (other.CompareTag("Player"))
         {
-            // Destruir solo el trigger para no sumar dos veces
+            
             puntajeTotal += puntosPorColision;
             textoPuntaje.text = "Puntos: " + puntajeTotal;
         }
