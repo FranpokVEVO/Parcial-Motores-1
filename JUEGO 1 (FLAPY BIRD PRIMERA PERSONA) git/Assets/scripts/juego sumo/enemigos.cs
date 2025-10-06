@@ -6,17 +6,12 @@ public class enemigos : MonoBehaviour
     private Transform jugador;       
 
     void Start()
-    {
-       
+    { 
         GameObject objJugador = GameObject.FindGameObjectWithTag("Jugador");
 
         if (objJugador != null)
         {
             jugador = objJugador.transform;
-        }
-        else
-        {
-            Debug.LogWarning("No se encontró ningún objeto con la tag 'Jugador'");
         }
     }
 
