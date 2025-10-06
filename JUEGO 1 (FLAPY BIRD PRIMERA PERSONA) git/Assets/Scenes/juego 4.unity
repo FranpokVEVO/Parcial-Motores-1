@@ -271,7 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9032125458bbf42806d2b54b976fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
   salto: 5
   adelante: 10
 --- !u!1001 &215085086
@@ -349,7 +348,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7151926187668646418, guid: 4cbb3f71a507f61448182b4cec40f349, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 786716722}
+      addedObject: {fileID: 786716727}
   m_SourcePrefab: {fileID: 100100000, guid: 4cbb3f71a507f61448182b4cec40f349, type: 3}
 --- !u!1 &330585543
 GameObject:
@@ -501,15 +500,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0504400976d74054d9eff8b797e6b979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 330585546}
-  pisoY: 0
-  techoY: 12
+  velocidadZ: 10
 --- !u!1 &355799045 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7151926187668646418, guid: 4cbb3f71a507f61448182b4cec40f349, type: 3}
   m_PrefabInstance: {fileID: 1560927500}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &355799046
+--- !u!114 &355799051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -518,13 +515,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 355799045}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1665e34592a41444196713af5675c460, type: 3}
+  m_Script: {fileID: 11500000, guid: 0504400976d74054d9eff8b797e6b979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 330585546}
-  fixedX: -4
-  fixedY: 6
-  height: 12
+  velocidadZ: 10
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +631,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7151926187668646418, guid: 4cbb3f71a507f61448182b4cec40f349, type: 3}
   m_PrefabInstance: {fileID: 215085086}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &786716722
+--- !u!114 &786716727
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -646,13 +640,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 786716721}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1665e34592a41444196713af5675c460, type: 3}
+  m_Script: {fileID: 11500000, guid: 0504400976d74054d9eff8b797e6b979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 330585546}
-  fixedX: 4
-  fixedY: 6
-  height: 12
+  velocidadZ: 10
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,9 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0504400976d74054d9eff8b797e6b979, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 330585546}
-  pisoY: 0
-  techoY: 12
+  velocidadZ: 10
 --- !u!1 &1283778847
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,7 +825,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7151926187668646418, guid: 4cbb3f71a507f61448182b4cec40f349, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 355799046}
+      addedObject: {fileID: 355799051}
   m_SourcePrefab: {fileID: 100100000, guid: 4cbb3f71a507f61448182b4cec40f349, type: 3}
 --- !u!1 &1582924902
 GameObject:
