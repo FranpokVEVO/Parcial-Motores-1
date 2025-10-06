@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class enemigo : MonoBehaviour
 {
-    public float velocidad = 5f;   // Velocidad de movimiento
-    public int direccion = -1;     // 1 = derecha, -1 = izquierda
     public float velocidad = 5f;   
     public int direccion = -1;    
     
