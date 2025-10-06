@@ -2,12 +2,6 @@ using UnityEngine;
 
 public class AroTextMesh : MonoBehaviour
 {
-    public float speed = 5f; // velocidad del aro
-    public int puntos = 1;   // puntos al pasar por el centro
-    public static int score = 0; // puntaje global
-    private Transform player; // referencia al jugador
-    private TextMesh scoreText; // referencia al texto 3D
-    private GameObject centroTrigger; // collider invisible del centro
     public float speed = 5f; 
     public int puntos = 1;  
     public static int score = 0; 
@@ -15,22 +9,13 @@ public class AroTextMesh : MonoBehaviour
     private TextMesh scoreText; 
     private GameObject centroTrigger; 
 
-    void Start()
-    {
-        // Buscar jugador automáticamente
-        // Buscar texto de puntaje (3D TextMesh con tag "Puntaje")
-        // Crear un collider interno invisible para el centro
-        
-    }
    
 
     void Update()
     {
-        // Movimiento del aro
         
         if (player != null)
             transform.position += player.forward * speed * Time.deltaTime;
-        // Actualizar puntaje
        
     }
 
