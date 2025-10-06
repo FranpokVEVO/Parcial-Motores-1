@@ -8,6 +8,7 @@ void OnCollisionEnter(Collision collision)
         {
             Destroy(collision.gameObject); // destruye el que toca la barrera
                      // destruye la barrera
+            Destroy(collision.gameObject); 
         }
     }
 }

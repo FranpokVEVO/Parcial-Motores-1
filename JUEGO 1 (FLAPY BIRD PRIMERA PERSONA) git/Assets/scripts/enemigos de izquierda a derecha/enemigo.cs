@@ -5,6 +5,8 @@ public class enemigo : MonoBehaviour
 {
     public float velocidad = 5f;   // Velocidad de movimiento
     public int direccion = -1;     // 1 = derecha, -1 = izquierda
+    public float velocidad = 5f;   
+    public int direccion = -1;     
 
     public delegate void EnemigoDestruidoAction();
     public static event EnemigoDestruidoAction OnEnemigoDestruido;
@@ -19,8 +21,10 @@ public class enemigo : MonoBehaviour
         string tag = collision.gameObject.tag;
 
         if (tag == "bala" || tag == "barrera")
+        if (tag == "bala")
         {
             OnEnemigoDestruido?.Invoke(); // Notifica al sistema de puntos
+            OnEnemigoDestruido?.Invoke(); 
             Destroy(gameObject);
         }
         else if (tag == "Jugador")

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class puntos : MonoBehaviour
 {
-public static int puntajeTotal = 0;   // Puntaje global
-    public TextMesh textoPuntaje;          // Asignar desde inspector
-    public int puntosPorEnemigo = 1;      // Puntos que da cada enemigo
+public static int puntajeTotal = 0;   
+    public TextMesh textoPuntaje;          
+    public int puntosPorEnemigo = 1;      
 
     private void OnEnable()
     {
@@ -20,6 +20,7 @@ public static int puntajeTotal = 0;   // Puntaje global
 
     private void SumarPuntos()
     {
+        
         puntajeTotal += puntosPorEnemigo;
 
         if (textoPuntaje != null)

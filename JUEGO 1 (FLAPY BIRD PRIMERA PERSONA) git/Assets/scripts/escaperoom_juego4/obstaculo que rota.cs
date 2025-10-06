@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 public class obstaculoquerota : MonoBehaviour
 {
     public Vector3 velocidadRotacion = new Vector3(0, 100f, 0); // grados por segundo
+    public Vector3 velocidadRotacion = new Vector3(0, 100f, 0); 
 
     void Update()
     {
         // Rota el objeto cada frame
+       
         transform.Rotate(velocidadRotacion * Time.deltaTime);
     }
 void OnCollisionEnter(Collision collision)

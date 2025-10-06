@@ -9,6 +9,12 @@ public class spawnenemigos : MonoBehaviour
     public float maxZ = 3f;              // Límite máximo en Z
     public float offsetY = 5f;           // Altura extra respecto al spawner
     public float posX = 0f;              // Posición fija en X
+    public GameObject objetoParaSpawn;   
+    public float intervalo = 2f;         
+    public float minZ = -3f;            
+    public float maxZ = 3f;             
+    public float offsetY = 5f;        
+    public float posX = 0f;             
 
     private float contadorTiempo;
 
@@ -31,6 +37,8 @@ public class spawnenemigos : MonoBehaviour
             transform.position.y + offsetY,           // Altura
             Random.Range(minZ, maxZ)                  // Z aleatoria
         );
+        
+        Vector3 posicionSpawn = new Vector3(posX,transform.position.y + offsetY,Random.Range(minZ, maxZ));
 
         Instantiate(objetoParaSpawn, posicionSpawn, Quaternion.identity);
     }
